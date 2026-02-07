@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diapedesis Report</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h2>diapedesis Report</h2>
+
+<form action="/report" method="post">
+    <input type="text" name="name" placeholder="Patient Name" required>
+    <input type="number" name="age" placeholder="Age" required>
+    <input type="number" name="bmi" placeholder="BMI" required>
+    <input type="number" name="glucose" placeholder="Glucose" required>
+    <input type="number" name="bp" placeholder="Blood Pressure" required>
+
+    <button type="submit">Generate Report</button>
+</form>
+
+</body>
+</html>

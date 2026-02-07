@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    padding: 30px;
+}
+
+.report-box {
+    background: #ffffff;
+    width: 420px;
+    margin: auto;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.section p,
+.details p {
+    display: block;          /* IMPORTANT: one by one */
+    margin: 6px 0;
+    font-size: 14px;
+}
+
+hr {
+    margin: 15px 0;
+}
+
+.result {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.positive {
+    color: rgb(15, 218, 42);
+    font-weight: bold;
+}
+
+.negative {
+    color: rgb(233, 15, 15);
+    font-weight: bold;
+}
+
+.pdf-form {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 8px 18px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}

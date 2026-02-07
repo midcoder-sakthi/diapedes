@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diapedesis Report</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h2>diapedesis Report</h2>
+<hr>
+
+<p><b>Name:</b> {{ name }}</p>
+<p><b>Date:</b> {{ date }} | <b>Time:</b> {{ time }}</p>
+
+<p>Age: {{ age }}</p>
+<p>BMI: {{ bmi }}</p>
+<p>Glucose: {{ glucose }}</p>
+<p>BP: {{ bp }}</p>
+
+<h3 class="{{ 'positive' if result=='Positive' else 'negative' }}">
+    Result: {{ result }}
+</h3>
+
+<form action="/download" method="post">
+    <input type="hidden" name="name" value="{{ name }}">
+    <input type="hidden" name="age" value="{{ age }}">
+    <input type="hidden" name="bmi" value="{{ bmi }}">
+    <input type="hidden" name="glucose" value="{{ glucose }}">
+    <input type="hidden" name="bp" value="{{ bp }}">
+    <input type="hidden" name="result" value="{{ result }}">
+    <input type="hidden" name="date" value="{{ date }}">
+    <input type="hidden" name="time" value="{{ time }}">
+
+    <button type="submit">Download PDF</button>
+</form>
+
+</body>
+</html>
